@@ -18,8 +18,6 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
-
-    private AppBarConfiguration appBarConfiguration;
     //persists accross config changes
     DataVM myVM;
     ImageView iv;
@@ -72,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
                 myVM.getJSON();
             }
         });
-
     }
 
     @Override

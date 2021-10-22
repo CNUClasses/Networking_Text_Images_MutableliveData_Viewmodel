@@ -111,7 +111,8 @@ public class DataVM extends ViewModel {
                     result.postValue(sb.toString());
                 } finally {
                     // close resource no matter what exception occurs
-                    in.close();
+                    if(in != null)
+                        in.close();
                     connection.disconnect();
                 }
             } catch (Exception exc) {
@@ -185,7 +186,8 @@ public class DataVM extends ViewModel {
 
                 } finally {
                     // close resource no matter what exception occurs
-                    bis.close();
+                    if(bis!= null)
+                        bis.close();
                 }
             } catch (Exception exc) {
                 Log.d(TAG, exc.toString());
