@@ -28,6 +28,7 @@ public class DataVM extends ViewModel {
     //this is the value that we want to keep track of through rotations
     int currentLink=0;
 
+    //threads that we may launch
     GetImageThread myGetImageThread;
     GetTextThread myGetTextThread;
 
@@ -194,7 +195,6 @@ public class DataVM extends ViewModel {
                 result.postValue(exc.toString());
             }
         }
-
     }
 
 }
