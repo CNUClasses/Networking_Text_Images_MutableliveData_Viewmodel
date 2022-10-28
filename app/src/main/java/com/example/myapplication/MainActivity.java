@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     //persists accross config changes
     DataVM myVM;
     ImageView iv;
+    private static final String MYURL = "https://raw.githubusercontent.com/CNUClasses/475_web_data/master/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,15 +60,14 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url=myVM.links[myVM.currentLink++%myVM.links.length];
-                myVM.getImage(url);
+                myVM.getImage(MYURL+"p0.png");
             }
         });
 
         findViewById(R.id.fabgetjson).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myVM.getJSON();
+                myVM.getJSON(MYURL+"pets.json");
             }
         });
     }
