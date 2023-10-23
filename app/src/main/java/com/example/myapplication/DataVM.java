@@ -25,7 +25,7 @@ public class DataVM extends ViewModel {
         return bmp;
     }
 
-    //any communications from thread
+    //the json we will download
     private MutableLiveData<String> result ;
     public MutableLiveData<String> getresult() {
         if(result==null)
@@ -34,18 +34,16 @@ public class DataVM extends ViewModel {
     }
 
     public void getJSON(String url){
-        //run the task
         GetTextThread myThread = new GetTextThread(url);
         myThread.start();
     }
 
     public void getImage(String url){
-        //run the task
         GetImageThread myThread = new GetImageThread(url);
         myThread.start();
     }
 
-    public class GetTextThread extends Thread{
+    private class GetTextThread extends Thread{
         private String  url;
         public GetTextThread(String url) {
             this.url=url;

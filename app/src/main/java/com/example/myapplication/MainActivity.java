@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     //persists accross config changes
     DataVM myVM;
     ImageView iv;
+
+    //base url of json and bitmap
     private static final String MYURL = "https://raw.githubusercontent.com/CNUClasses/475_web_data/master/";
 
     @Override
