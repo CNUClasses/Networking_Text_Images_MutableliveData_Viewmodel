@@ -59,10 +59,11 @@ public class MainActivity extends AppCompatActivity {
         // Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
         myVM.getresult().observe(this,resultObserver);
 
+
         findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myVM.getImage(MYURL+"p0.png");
+                myVM.getImage(MYURL+"pet0.png");
             }
         });
 
